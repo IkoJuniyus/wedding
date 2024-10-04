@@ -546,8 +546,6 @@
                 <h2 class="font-esthetic my-4" style="font-size: 2.5rem;">&amp;</h2>
                 <h2 class="font-esthetic my-4" style="font-size: 2.5rem;">Nengsih</h2>
                 <div id="guest-name" data-message="Kepada Yth Bapak/Ibu/Saudara/i"></div>
-                <div >Kepada Yth Bapak/Ibu/Saudara/i</div>
-                <p id="tamu"></p>
                 <button type="button" class="btn btn-light shadow rounded-4 mt-4" onclick="pindahHalaman();">
                     <i class="fa-solid fa-envelope-open me-2"></i>Open Invitation
                 </button>
@@ -582,6 +580,17 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
     <script src="./js/livechat.js" type="module"></script>
     <script type="text/javascript">
+
+        const name = (new URLSearchParams(window.location.search)).get('to');
+        const guest = document.getElementById('guest-name');
+        if (!name || !guest) {
+            guest.remove();
+        } else {
+            const div = document.createElement('div');
+            div.classList.add('m-2');
+            div.innerHTML = `<p class="mt-0 mb-1 mx-0 p-0" style="font-size: 0.95rem;">${guest.getAttribute('data-message')}</p><h2>${name}</h2>`;
+            guest.appendChild(div);
+        }
 
         const progressBar = document.querySelector('.progress-bar');
         let width = 0;
