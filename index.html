@@ -808,6 +808,7 @@
                 <div class="loading-container">
                     <div class="progress-bar"></div>
                 </div>
+                <h2 class="d-inline m-0 p-0" id="progresst">0</h2><small class="ms-1 me-0 my-0 p-0 d-inline">%</small>
             </div>
         </div>
     </div>
@@ -863,6 +864,7 @@
         }
 
         const progressBar = document.querySelector('.progress-bar');
+        const progresst = document.getElementById('progresst');
         let width = 0;
 
         const animateProgressBar = () => {
@@ -874,6 +876,7 @@
             }
             width++;
             progressBar.style.width = width + '%';
+            progresst.textContent = width ;
             setTimeout(animateProgressBar, 30);
         };
 
@@ -964,23 +967,6 @@ countdown(countDownDate);
           // After 3 seconds, remove the show class from DIV
             setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
          }
-
-        //  const prog = document.querySelector('.progress-bar222');
-        // let width = 0;
-
-        // const playaudio = () => {
-        //     if (width >= 100) {
-        //         setTimeout(() => {
-        //             togglePlayPause();
-        //         }, 500); // Waktu tunda sebelum pindah halaman
-        //         return;
-        //     }
-        //     width++;
-        //     prog.style.width = width + '%';
-        //     setTimeout(animateProgressBar, 30);
-        // };
-
-        // playaudio();
     </script>
 </body>
 
