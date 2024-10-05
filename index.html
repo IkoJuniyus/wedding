@@ -61,48 +61,150 @@
 
     <link rel="stylesheet" href="./css/app.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/animation.css">
     <style>
-#snackbar {
-  visibility: hidden;
-  min-width: 250px;
-  margin-left: -125px;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  border-radius: 25px;
-  padding: 16px;
-  position: fixed;
-  z-index: 1;
-  left: 50%;
-  bottom: 100px;
-  font-size: 17px;
-}
+            .geleng {
+              animation: shake 2s infinite;
+            }
 
-#snackbar.show {
-  visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
+            @keyframes shake {
+              0% { transform: rotate(0deg); }
+              
+              20% { transform: rotate(10deg); }
+              
+              40% { transform: rotate(10deg); }
+             
+              60% { transform: rotate(10deg); }
+             
+              80% { transform: rotate(10deg); }
+             
+              100% { transform: rotate(0deg); }
+            }.geleng1 {
+              animation: shake1 2s infinite;
+            }
 
-@-webkit-keyframes fadein {
-  from {bottom: 0; opacity: 0;} 
-  to {bottom: 100px; opacity: 1;}
-}
+            @keyframes shake1 {
+              0% { transform: rotate(0deg); }
+              
+              20% { transform: rotate(-10deg); }
+              
+              40% { transform: rotate(-10deg); }
+             
+              60% { transform: rotate(-10deg); }
+             
+              80% { transform: rotate(-10deg); }
+             
+              100% { transform: rotate(0deg); }
+            }
+            .goyang {
+              animation: goyang 1s infinite alternate;
+            }
 
-@keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 100px; opacity: 1;}
-}
+            @keyframes goyang {
+              from {
+                transform: translateX(-10px);
+              }
+              to {
+                transform: translateX(10px);
+              }
+            }
+            .animasi1 {
+              cursor: pointer;
+              animation: bounce1 2s infinite;
+            }
 
-@-webkit-keyframes fadeout {
-  from {bottom: 30px; opacity: 1;} 
-  to {bottom: 0; opacity: 0;}
-}
+            @keyframes bounce1 {
+              0% {
+                transform: translateY(0);
+              }
+              50% {
+                transform: translateY(10px);
+              }
+              100% {
+                transform: translateY(0);
+              }
+            }
+            .animasi2 {
+              cursor: pointer;
+              animation: bounce2 2s infinite;
+            }
 
-@keyframes fadeout {
-  from {bottom: 100px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
-}
+            @keyframes bounce2 {
+              0% {
+                transform: translateY(0);
+              }
+              50% {
+                transform: translateY(-10px);
+              }
+              100% {
+                transform: translateY(0);
+              }
+            }
+
+            .button {
+              border: none;
+              color: black;
+              padding: 15px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              cursor: pointer;
+              animation: bounce 2s infinite;
+            }
+
+            @keyframes bounce {
+              0% {
+                transform: translateY(0);
+              }
+              50% {
+                transform: translateY(-20px);
+              }
+              100% {
+                transform: translateY(0);
+              }
+            }
+            #snackbar {
+              visibility: hidden;
+              min-width: 250px;
+              margin-left: -125px;
+              background-color: #333;
+              color: #fff;
+              text-align: center;
+              border-radius: 25px;
+              padding: 16px;
+              position: fixed;
+              z-index: 1;
+              left: 50%;
+              bottom: 100px;
+              font-size: 17px;
+            }
+
+            #snackbar.show {
+              visibility: visible;
+              -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+              animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            }
+
+            @-webkit-keyframes fadein {
+              from {bottom: 0; opacity: 0;} 
+              to {bottom: 100px; opacity: 1;}
+            }
+
+            @keyframes fadein {
+              from {bottom: 0; opacity: 0;}
+              to {bottom: 100px; opacity: 1;}
+            }
+
+            @-webkit-keyframes fadeout {
+              from {bottom: 30px; opacity: 1;} 
+              to {bottom: 0; opacity: 0;}
+            }
+
+            @keyframes fadeout {
+              from {bottom: 100px; opacity: 1;}
+              to {bottom: 0; opacity: 0;}
+            }
             .loading-container {
                 width: 100%;
                 display: flex;
@@ -201,7 +303,7 @@
                 <h2 class="font-esthetic my-4" style="font-size: 2.5rem;">Nengsih</h2>
                 <p class="mb-0" style="font-size: 1.25rem;">Sabtu, 21 Desember 2024</p>
 
-                <a class="btn btn-outline-light btn-sm shadow rounded-pill px-3 my-2" target="_blank" href="https://calendar.google.com/calendar/u/0/r/eventedit?text=The+Wedding+of+Iko+Juniyus+and+Nengsih&details=The+Wedding+of+Iko+Juniyus+and+Nengsih+%7C+21+Desember+2024+%7C+10.00+-+11.00+WIB&dates=20241221T100000/20241221T110000&location=https://maps.app.goo.gl/oLE8PAakPwqhqHBE6">
+                <a class="btn btn-outline-light btn-sm shadow rounded-pill px-3 my-2 animasi1" target="_blank" href="https://calendar.google.com/calendar/u/0/r/eventedit?text=The+Wedding+of+Iko+Juniyus+and+Nengsih&details=The+Wedding+of+Iko+Juniyus+and+Nengsih+%7C+21+Desember+2024+%7C+10.00+-+11.00+WIB&dates=20241221T100000/20241221T110000&location=https://maps.app.goo.gl/oLE8PAakPwqhqHBE6">
                     <i class="fa-solid fa-calendar-check me-2"></i>Save The Date
                 </a>
 
@@ -226,16 +328,33 @@
                 <h2 class="font-arabic py-4 px-2" style="font-size: 2rem">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
 
              
+                <!-- Love animation -->
+                <div class="position-relative">
+                    <div class="position-absolute goyang" style="top: 0%; right: 10%;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="opacity-50" onload="util.animate(this, 500, 'animate-love')" viewBox="0 0 16 16">
+                            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                        </svg>
+                    </div>
+                </div>
 
 
                 <h2 class="font-esthetic py-4 px-2" style="font-size: 2rem">Assalamualaikum Warahmatullahi Wabarakatuh</h2>
 
                 <p class="pb-3 px-3" style="font-size: 0.95rem;">Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i serta kerabat sekalian untuk menghadiri acara pernikahan kami:</p>
 
+                <!-- Love animation -->
+                <div class="position-relative">
+                    <div class="position-absolute goyang" style="top: 0%; left: 10%;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="opacity-50" onload="util.animate(this, 2000, 'animate-love')" viewBox="0 0 16 16">
+                            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                        </svg>
+                    </div>
+                </div>
+
                 <div class="overflow-x-hidden">
 
                     <div >
-                        <div class="img-crop border border-3 border-light shadow my-4 mx-auto">
+                        <div class="img-crop border border-3 border-light shadow my-4 mx-auto geleng">
                             <img src="./assets/images/cowo.png" alt="cowo" onclick="util.modal(this)">
                         </div>
                         <h2 class="font-esthetic" style="font-size: 2.5rem;">Iko Juniyus Adi Pratama, DNIIT</h2>
@@ -243,14 +362,31 @@
                         <p class="mb-0">Bapak Budiyono &amp; Ibu Warsini</p>
                     </div>
 
+
                     <!-- Love animation -->
+                    <div class="position-relative">
+                        <div class="position-absolute goyang" style="top: 0%; right: 10%;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="opacity-50" onload="util.animate(this, 3000, 'animate-love')" viewBox="0 0 16 16">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                            </svg>
+                        </div>
+                    </div>
        
 
                     <h2 class="font-esthetic my-4" style="font-size: 3rem;">&</h2>
 
 
+                    <!-- Love animation -->
+                    <div class="position-relative">
+                        <div class="position-absolute goyang" style="top: 0%; left: 10%;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="opacity-50" onload="util.animate(this, 2000, 'animate-love')" viewBox="0 0 16 16">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                            </svg>
+                        </div>
+                    </div>
+
                     <div >
-                        <div class="img-crop border border-3 border-light shadow my-4 mx-auto">
+                        <div class="img-crop border border-3 border-light shadow my-4 mx-auto geleng1">
                             <img src="./assets/images/cewe.png" alt="cewe" onclick="util.modal(this)">
                         </div>
                         <h2 class="font-esthetic" style="font-size: 2.5rem;">Nengsih, S.Kom</h2>
@@ -261,7 +397,14 @@
             </div>
         </section>
 
-        <!-- Ballon animation -->
+<!-- Ballon animation -->
+        <div class="position-relative">
+            <div class="position-absolute goyang" style="top: 0%; right: 5%;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="opacity-50" onload="util.animate(this, 1500, 'animate-love')" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063q.068.062.132.129.065-.067.132-.129c3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3 3 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398"></path>
+                </svg>
+            </div>
+        </div>
 
 
         <!-- Wave Separator -->
@@ -286,7 +429,15 @@
             </div>
         </div>
 
+
         <!-- Ballon animation -->
+        <div class="position-relative">
+            <div class="position-absolute goyang" style="top: 0%; left: 5%;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="opacity-50" onload="util.animate(this, 4000, 'animate-love')" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063q.068.062.132.129.065-.067.132-.129c3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3 3 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398"></path>
+                </svg>
+            </div>
+        </div>
 
 
         <!-- Wave Separator -->
@@ -322,6 +473,14 @@
 
                     <p class="mt-4 py-2" style="font-size: 0.95rem;">Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, insyaAllah kami akan menyelenggarakan acara:</p>
 
+                    <!-- Love animation -->
+                    <div class="position-relative">
+                        <div class="position-absolute goyang" style="top: 0%; right: 10%;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="opacity-50" onload="util.animate(this, 3000, 'animate-love')" viewBox="0 0 16 16">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                            </svg>
+                        </div>
+                    </div>
 
                     <div class="overflow-x-hidden">
                         <div class="py-2" >
@@ -336,11 +495,18 @@
                     </div>
 
                     <div class="py-2">
-                        <a href="https://maps.app.goo.gl/3Po9Yc4FawKA9MRg8" target="_blank" class="btn btn-outline-light btn-sm rounded-pill shadow mb-2 px-3"><i class="fa-solid fa-map-location-dot me-2"></i>Lihat Google Maps</a>
+                        <a href="https://maps.app.goo.gl/3Po9Yc4FawKA9MRg8" target="_blank" class="btn btn-outline-light btn-sm rounded-pill shadow mb-2 px-3 animasi2"><i class="fa-solid fa-map-location-dot me-2 "></i>Lihat Google Maps</a>
                         <p class="mb-0 mt-1 mx-1 pb-4" style="font-size: 0.95rem;">Jl. Tanah Merdeka II No. 44, RT.003/RW.006, Rambutan, Kec. Ciracas, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13830</p>
                     </div>
 
                     <!-- Love animation -->
+                    <div class="position-relative">
+                        <div class="position-absolute goyang" style="top: 0%; left: 10%;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="opacity-50" onload="util.animate(this, 2000, 'animate-love')" viewBox="0 0 16 16">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                            </svg>
+                        </div>
+                    </div>
     
                 </div>
             </div>
@@ -416,6 +582,40 @@
                         </button>
 
                         <button class="carousel-control-next" type="button" data-bs-target="#carousel-image-two" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                    <div id="carousel-image-three" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carousel-image-one" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carousel-image-one" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carousel-image-one" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carousel-image-one" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        </div>
+
+                        <div class="carousel-inner rounded-4">
+                            <div class="carousel-item active">
+                                <img src="./assets/images/btw1.png?random=1" alt="image 1" class="d-block w-100" onclick="util.modal(this)">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/btw2.png?random=2" alt="image 2" class="d-block w-100" onclick="util.modal(this)">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/btw3.png?random=3" alt="image 3" class="d-block w-100" onclick="util.modal(this)">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/btw4.png?random=4" alt="image 4" class="d-block w-100" onclick="util.modal(this)">
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-image-one" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-image-one" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
@@ -536,17 +736,17 @@
     <div class="loading-page bg-black" id="welcome" style="opacity: 1;">
         <div class="d-flex justify-content-center align-items-center" style="height: 100vh !important;">
             <div class="text-center">
-                <h2 class="font-esthetic mb-4" style="font-size: 2.5rem;">The Wedding Of</h2>
+                <h2 class="font-esthetic mb-4 goyang" style="font-size: 2.5rem;">The Wedding Of</h2>
 
                 <div class="img-crop border border-3 border-light shadow mb-4 mx-auto">
-                    <img src="./assets/images/bg.png" alt="background">
+                    <img src="./assets/images/bg.png" alt="background" >
                 </div>
 
                 <h2 class="font-esthetic my-4" style="font-size: 2.5rem;">Iko Juniyus Adi Pratama</h2>
                 <h2 class="font-esthetic my-4" style="font-size: 2.5rem;">&amp;</h2>
                 <h2 class="font-esthetic my-4" style="font-size: 2.5rem;">Nengsih</h2>
                 <div id="guest-name" data-message="Kepada Yth Bapak/Ibu/Saudara/i"></div>
-                <button type="button" class="btn btn-light shadow rounded-4 mt-4" onclick="pindahHalaman();">
+                <button type="button" class="btn btn-light shadow rounded-4 mt-4 button" onclick="pindahHalaman();">
                     <i class="fa-solid fa-envelope-open me-2"></i>Open Invitation
                 </button>
             </div>
