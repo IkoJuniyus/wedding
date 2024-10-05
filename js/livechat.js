@@ -67,7 +67,7 @@ dbRef.on('child_added', (snapshot) => {
 
   dataArray.sort((a, b) => b.timestamp - a.timestamp);
   
-  const top10Data = dataArray.slice(0, 10);
+  dataArray = dataArray.slice(0, 10);
 
   const dataListElement = document.getElementById('messages');
   dataListElement.innerHTML = ''; // Kosongkan daftar sebelum menambahkan data baru
