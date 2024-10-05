@@ -63,6 +63,49 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/animation.css">
     <style>
+                    /* Gaya untuk modal */
+            .modal { /* Hidden by default */
+              display: none;
+              position: fixed; 
+              z-index: 1; 
+              left: 0;
+              top: 0;
+              width: 100%; 
+              height: 100%; 
+              overflow: auto; 
+              background-color: rgba(0,0,0,0.4);
+            }
+
+            /* Gaya   
+             untuk konten dalam modal */
+            .modal-content {
+              margin: auto;
+              display: block;
+              width: 80%;
+              max-width: 700px;
+            }
+
+            /* Gaya untuk teks keterangan gambar */
+            #caption {
+              margin: auto;
+              display: block;
+              width: 80%;
+              max-width: 700px;
+              text-align: center;
+              color: #ccc;
+              padding: 10px 0;
+            }
+
+            /* Gaya untuk tombol tutup */
+            .close {
+              color: white;
+              position: absolute;
+              top: 15px;
+              right: 35px;
+              font-size: 40px;
+              font-weight: bold;
+            }
+
             .geleng {
               animation: shake 2s infinite;
             }
@@ -294,7 +337,7 @@
 
                 <div class="py-4">
                     <div class="img-crop border border-3 border-light shadow mx-auto">
-                        <img src="./assets/images/bg.png" alt="bg" onclick="util.modal(this)">
+                        <img src="./assets/images/bg.png" alt="bg" onclick="openModal(this);">
                     </div>
                 </div>
 
@@ -355,7 +398,7 @@
 
                     <div >
                         <div class="img-crop border border-3 border-light shadow my-4 mx-auto geleng">
-                            <img src="./assets/images/cowo.png" alt="cowo" onclick="util.modal(this)">
+                            <img src="./assets/images/cowo.png" alt="cowo" class="popup-img">
                         </div>
                         <h2 class="font-esthetic" style="font-size: 2.5rem;">Iko Juniyus Adi Pratama, DNIIT</h2>
                         <p class="mt-3 mb-0" style="font-size: 1.25rem;">Putra</p>
@@ -387,7 +430,7 @@
 
                     <div >
                         <div class="img-crop border border-3 border-light shadow my-4 mx-auto geleng1">
-                            <img src="./assets/images/cewe.png" alt="cewe" onclick="util.modal(this)">
+                            <img src="./assets/images/cewe.png" alt="cewe" class="popup-img">
                         </div>
                         <h2 class="font-esthetic" style="font-size: 2.5rem;">Nengsih, S.Kom</h2>
                         <p class="mt-3 mb-0" style="font-size: 1.25rem;">Putri</p>
@@ -529,16 +572,16 @@
 
                         <div class="carousel-inner rounded-4">
                             <div class="carousel-item active">
-                                <img src="./assets/images/btw1.png?random=1" alt="image 1" class="d-block w-100" onclick="util.modal(this)">
+                                <img src="./assets/images/btw1.png?random=1" alt="image 1" class="d-block w-100 popup-img" onclick="openModal(this);" >
                             </div>
                             <div class="carousel-item">
-                                <img src="./assets/images/btw2.png?random=2" alt="image 2" class="d-block w-100" onclick="util.modal(this)">
+                                <img src="./assets/images/btw2.png?random=2" alt="image 2" class="d-block w-100 popup-img" onclick="openModal(this);" >
                             </div>
                             <div class="carousel-item">
-                                <img src="./assets/images/btw3.png?random=3" alt="image 3" class="d-block w-100" onclick="util.modal(this)">
+                                <img src="./assets/images/btw3.png?random=3" alt="image 3" class="d-block w-100 popup-img" onclick="openModal(this);" >
                             </div>
                             <div class="carousel-item">
-                                <img src="./assets/images/btw4.png?random=4" alt="image 4" class="d-block w-100" onclick="util.modal(this)">
+                                <img src="./assets/images/btw4.png?random=4" alt="image 4" class="d-block w-100 popup-img" onclick="openModal(this);" >
                             </div>
                         </div>
 
@@ -563,16 +606,16 @@
 
                         <div class="carousel-inner rounded-4">
                             <div class="carousel-item active">
-                                <img src="./assets/images/jw1.png?random=5" alt="image 5" class="d-block w-100" onclick="util.modal(this)">
+                                <img src="./assets/images/jw1.png?random=5" alt="image 5" class="d-block w-100" onclick="openModal(this);" >
                             </div>
                             <div class="carousel-item">
-                                <img src="./assets/images/jw2.png?random=6" alt="image 6" class="d-block w-100" onclick="util.modal(this)">
+                                <img src="./assets/images/jw2.png?random=6" alt="image 6" class="d-block w-100" onclick="openModal(this);" >
                             </div>
                             <div class="carousel-item">
-                                <img src="./assets/images/jw3.png?random=7" alt="image 7" class="d-block w-100" onclick="util.modal(this)">
+                                <img src="./assets/images/jw3.png?random=7" alt="image 7" class="d-block w-100" onclick="openModal(this);" >
                             </div>
                             <div class="carousel-item">
-                                <img src="./assets/images/jw4.png?random=8" alt="image 8" class="d-block w-100" onclick="util.modal(this)">
+                                <img src="./assets/images/jw4.png?random=8" alt="image 8" class="d-block w-100" onclick="openModal(this);" >
                             </div>
                         </div>
 
@@ -597,16 +640,16 @@
 
                         <div class="carousel-inner rounded-4">
                             <div class="carousel-item active">
-                                <img src="./assets/images/btw1.png?random=1" alt="image 1" class="d-block w-100" onclick="util.modal(this)">
+                                <img src="./assets/images/btw1.png?random=1" alt="image 1" class="d-block w-100" onclick="openModal(this);" >
                             </div>
                             <div class="carousel-item">
-                                <img src="./assets/images/btw2.png?random=2" alt="image 2" class="d-block w-100" onclick="util.modal(this)">
+                                <img src="./assets/images/btw2.png?random=2" alt="image 2" class="d-block w-100" onclick="openModal(this);" >
                             </div>
                             <div class="carousel-item">
-                                <img src="./assets/images/btw3.png?random=3" alt="image 3" class="d-block w-100" onclick="util.modal(this)">
+                                <img src="./assets/images/btw3.png?random=3" alt="image 3" class="d-block w-100" onclick="openModal(this);" >
                             </div>
                             <div class="carousel-item">
-                                <img src="./assets/images/btw4.png?random=4" alt="image 4" class="d-block w-100" onclick="util.modal(this)">
+                                <img src="./assets/images/btw4.png?random=4" alt="image 4" class="d-block w-100" onclick="openModal(this);" >
                             </div>
                         </div>
 
@@ -739,7 +782,7 @@
                 <h2 class="font-esthetic mb-4 goyang" style="font-size: 2.5rem;">The Wedding Of</h2>
 
                 <div class="img-crop border border-3 border-light shadow mb-4 mx-auto">
-                    <img src="./assets/images/bg.png" alt="background" >
+                    <img src="./assets/images/bg.png" alt="background">
                 </div>
 
                 <h2 class="font-esthetic my-4" style="font-size: 2.5rem;">Iko Juniyus Adi Pratama</h2>
@@ -752,8 +795,6 @@
             </div>
         </div>
     </div>
-
-
     <!-- Audio Button -->
     <button type="button" id="button-music"  class="btn bg-dark border border-2 btn-sm rounded-circle btn-music"  onclick="togglePlayPause()"><i class="fa-solid fa-circle-play"></i>
     </button>
@@ -770,6 +811,25 @@
             </div>
         </div>
     </div>
+
+     <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+      </div>
+
+    <div class="modal" id="modal-image" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content rounded-4">
+                <div class="modal-body p-0">
+                    <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
+                        <img src="./assets/images/bg.png" class="img-fluid w-100 rounded-4" alt="image" id="show-modal-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Image -->
                     <div class="progress-bar222" style="display: none;"></div>
 </body>
     <!-- Dependencies JS -->
@@ -780,6 +840,19 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
     <script src="./js/livechat.js" type="module"></script>
     <script type="text/javascript">
+        var modal = document.getElementById("modal-image");
+
+        function openModal(img) {
+          modal.style.display = "block";
+          document.getElementById("show-modal-image").src = img.src;
+
+        }
+
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
 
         const name = (new URLSearchParams(window.location.search)).get('to');
         const guest = document.getElementById('guest-name');
