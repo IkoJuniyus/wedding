@@ -1009,6 +1009,7 @@
         button.innerHTML = '<i class="fa-solid fa-circle-play"></i>';
       } else {
         audio.play();
+        audio.loop = true;
         button.innerHTML = '<i class="fa-solid fa-circle-pause spin-button"></i>';
         isPlaying = true;
       }
