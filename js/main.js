@@ -26,6 +26,7 @@
         // startCarousel();
 
 
+
         const bg = ["./assets/images/bg.png","./assets/images/bg1.png", "./assets/images/bg2.png"];
 
         const bege1 = document.getElementById("bgcover");
@@ -56,6 +57,64 @@
             currentImageIndex = (currentImageIndex + 1) % cewe.length;
         }
         setInterval(changeImage, 2500);
+
+        const tema = ["betawi", "jawa", "ori"];
+
+        const jawa = ["./assets/images/wayangcowo.png", "./assets/images/wayangcewe.png", "./assets/images/wayang.png"];
+        const betawi = ["./assets/images/ondelondelcowo.png", "./assets/images/ondelondelcewe.png", "./assets/images/monas.png"];
+        const ori = ["./assets/images/doveleft.png", "./assets/images/doveright.png", "./assets/images/ring.png"];
+
+        const iconRcowo = document.getElementById("iconRcowo");
+        const iconLcowo = document.getElementById("iconLcowo");
+        const iconRcewe = document.getElementById("iconRcewe");
+        const iconLcewe = document.getElementById("iconLcewe");
+        const iconRdoa = document.getElementById("iconRdoa");
+        const iconLdoa = document.getElementById("iconLdoa");
+        const iconRjadwal = document.getElementById("iconRjadwal");
+        const iconLjadwal = document.getElementById("iconLjadwal");
+
+        let currentImageicon = 0;
+
+        function changeImageicon() {
+            switch(currentImageicon) {
+              case 1:
+                iconRcowo.src = jawa[2];
+                iconLcowo.src = jawa[0];
+                iconRcewe.src = jawa[1];
+                iconLcewe.src = jawa[2];
+                iconRdoa.src = jawa[2];
+                iconLdoa.src = jawa[2];
+                iconRjadwal.src = jawa[1];
+                iconLjadwal.src = jawa[0];
+                currentImageicon = 2;
+                break;
+              case 2:
+                iconRcowo.src = ori[2];
+                iconLcowo.src = ori[0];
+                iconRcewe.src = ori[1];
+                iconLcewe.src = ori[2];
+                iconRdoa.src = ori[2];
+                iconLdoa.src = ori[2];
+                iconRjadwal.src = ori[1];
+                iconLjadwal.src = ori[0];
+                currentImageicon = 0;
+                break;
+              default:
+                iconRcowo.src = betawi[2];
+                iconLcowo.src = betawi[0];
+                iconRcewe.src = betawi[1];
+                iconLcewe.src = betawi[2];
+                iconRdoa.src = betawi[2];
+                iconLdoa.src = betawi[2];
+                iconRjadwal.src = betawi[1];
+                iconLjadwal.src = betawi[0];
+                currentImageicon = 1;
+                break;
+            }
+            
+        }
+
+        setInterval(changeImageicon, 2500);
 
         var modal = document.getElementById("modal-image");
         var images = document.getElementById("show-modal-image");
