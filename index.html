@@ -65,251 +65,8 @@
     <link rel="stylesheet" href="./css/app.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/animation.css">
-    <style>
-                /*.fontstyle {
-                  font-family: 'Classic Romantic', sans-serif;
-                }
-                .fontstyle1 {
-                  font-family: 'Rose Pink', sans-serif;
-                }*/
-                 .fontstyle1 {
-                    font-family: 'Playfair Display', Sans-serif;
-                }
-            .modal { /* Hidden by default */
-              display: none;
-              position: fixed; 
-              z-index: 1; 
-              left: 0;
-              top: 0;
-              width: 100%; 
-              height: 100%; 
-              overflow: auto; 
-              background-color: rgba(0,0,0,0.4);
-            }
-
-            /* Gaya   
-             untuk konten dalam modal */
-            .modal-content {
-              margin: auto;
-              display: block;
-              width: 80%;
-              max-width: 700px;
-            }
-
-            /* Gaya untuk teks keterangan gambar */
-            #caption {
-              margin: auto;
-              display: block;
-              width: 80%;
-              max-width: 700px;
-              text-align: center;
-              color: #ccc;
-              padding: 10px 0;
-            }
-
-            /* Gaya untuk tombol tutup */
-            .close {
-              color: white;
-              position: absolute;
-              top: 15px;
-              right: 35px;
-              font-size: 40px;
-              font-weight: bold;
-            }
-
-            .geleng {
-              animation: shake 2.5s infinite;
-            }
-
-            @keyframes shake {
-              0% { transform: rotate(0deg); }
-              
-              10% { transform: rotate(12deg); }
-              
-              20% { transform: rotate(14deg); }
-              
-              30% { transform: rotate(16deg); }
-              
-              40% { transform: rotate(18deg); }
-              
-              50% { transform: rotate(18deg); }
-             
-              70% { transform: rotate(16deg); }
-             
-              80% { transform: rotate(14deg); }
-              
-              90% { transform: rotate(12deg); }
-             
-              100% { transform: rotate(0deg); }
-            }
-
-            .geleng1 {
-              animation: shake1 2.5s infinite;
-            }
-
-            @keyframes shake1 {
-              0% { transform: rotate(0deg); }
-              
-              10% { transform: rotate(-12deg); }
-              
-              20% { transform: rotate(-14deg); }
-              
-              30% { transform: rotate(-16deg); }
-              
-              40% { transform: rotate(-18deg); }
-              
-              50% { transform: rotate(-18deg); }
-             
-              70% { transform: rotate(-16deg); }
-             
-              80% { transform: rotate(-14deg); }
-              
-              90% { transform: rotate(-12deg); }
-             
-              100% { transform: rotate(0deg); }
-            }
-
-            @keyframes goyang {
-              from {
-                transform: translateX(-10px);
-              }
-              to {
-                transform: translateX(10px);
-              }
-            }
-            .animasi1 {
-              cursor: pointer;
-              animation: bounce1 2s infinite;
-            }
-
-            @keyframes bounce1 {
-              0% {
-                transform: translateY(0);
-              }
-              50% {
-                transform: translateY(10px);
-              }
-              100% {
-                transform: translateY(0);
-              }
-            }
-            .animasi2 {
-              cursor: pointer;
-              animation: bounce2 2s infinite;
-            }
-
-            @keyframes bounce2 {
-              0% {
-                transform: translateY(0);
-              }
-              50% {
-                transform: translateY(-8px);
-              }
-              100% {
-                transform: translateY(0);
-              }
-            }
-
-            .button {
-              border: none;
-              color: black;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              cursor: pointer;
-              animation: bounce 2s infinite;
-            }
-
-            @keyframes bounce {
-              0% {
-                transform: translateY(0);
-              }
-              50% {
-                transform: translateY(-20px);
-              }
-              100% {
-                transform: translateY(0);
-              }
-            }
-            #snackbar {
-              visibility: hidden;
-              min-width: 250px;
-              margin-left: -125px;
-              background-color: #333;
-              color: #fff;
-              text-align: center;
-              border-radius: 25px;
-              padding: 16px;
-              position: fixed;
-              z-index: 1;
-              left: 50%;
-              bottom: 100px;
-              font-size: 17px;
-            }
-
-            #snackbar.show {
-              visibility: visible;
-              -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-              animation: fadein 0.5s, fadeout 0.5s 2.5s;
-            }
-
-            @-webkit-keyframes fadein {
-              from {bottom: 0; opacity: 0;} 
-              to {bottom: 100px; opacity: 1;}
-            }
-
-            @keyframes fadein {
-              from {bottom: 0; opacity: 0;}
-              to {bottom: 100px; opacity: 1;}
-            }
-
-            @-webkit-keyframes fadeout {
-              from {bottom: 30px; opacity: 1;} 
-              to {bottom: 0; opacity: 0;}
-            }
-
-            @keyframes fadeout {
-              from {bottom: 100px; opacity: 1;}
-              to {bottom: 0; opacity: 0;}
-            }
-            .loading-container {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .progress-bar {
-                width: 50%; /* Sesuaikan lebar */
-                height: 20px;
-                background-color: #eee;
-                border-radius: 5px;
-                overflow: hidden;
-            }
-
-            .progress {
-                height: 100%;
-                background: linear-gradient(to right, #4CAF50, #333);
-                width: 0%;
-                transition: width 1.5s ease-in-out;
-            }
-
-            .hidden {
-                opacity: 0;
-                transition: opacity 0.5s;
-            }
-            .center {
-                position:fixed;
-                top: 40%;
-                left: 50%;
-                width:30em;
-                height:18em;
-                margin-top: -9em; /*set to a negative number 1/2 of your height*/
-                margin-left: -15em; /*set to a negative number 1/2 of your width*/
-            }
-</style>
+    <link rel="stylesheet" href="./css/main.css">
+    
 </head>
 
 <!-- If not using comments, you can remove the data-key and data-url attributes -->
@@ -397,12 +154,17 @@
                 <h2 class="font-arabic py-4 px-2" style="font-size: 2rem">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
 
              
-                <!-- Love animation -->
-                <div class="position-relative">
+                <!-- Loveanimation -->
+                <!-- <div class="position-relative">
                     <div class="position-absolute goyang" style="top: 0%; right: 10%;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="opacity-50" onload="util.animate(this, 500, 'animate-love')" viewBox="0 0 16 16">
                             <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
                         </svg>
+                    </div>
+                </div> -->
+                <div class="position-relative">
+                    <div class="position-absolute geleng1" style="top: 0%; right: 10%;">
+                        <img src="./assets/images/monas.png" width="48" height="48" fill="currentColor">
                     </div>
                 </div>
 
@@ -411,7 +173,7 @@
 
                 <p class="pb-3 px-3 animasi1" style="font-size: 0.95rem;">Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i serta kerabat sekalian untuk menghadiri acara pernikahan kami:</p>
 
-                <!-- Love animation -->
+                <!-- Loveanimation -->
                 <div class="position-relative">
                     <div class="position-absolute goyang" style="top: 0%; left: 10%;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="opacity-50" onload="util.animate(this, 2000, 'animate-love')" viewBox="0 0 16 16">
@@ -419,6 +181,11 @@
                         </svg>
                     </div>
                 </div>
+                <!-- <div class="position-relative">
+                    <div class="position-absolute geleng1" style="top: 0%; right: 10%;">
+                        <img src="./assets/images/monas.png" width="48" height="48" fill="currentColor">
+                    </div>
+                </div> -->
 
                 <div class="overflow-x-hidden">
 
@@ -432,7 +199,7 @@
                     </div>
 
 
-                    <!-- Love animation -->
+                    <!-- Loveanimation -->
                     <div class="position-relative">
                         <div class="position-absolute goyang" style="top: 0%; right: 10%;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="opacity-50" onload="util.animate(this, 3000, 'animate-love')" viewBox="0 0 16 16">
@@ -445,7 +212,7 @@
                     <h2 class="fontstyle1 my-4 goyang geleng" style="font-size: 3rem;">&</h2>
 
 
-                    <!-- Love animation -->
+                    <!-- Loveanimation -->
                     <div class="position-relative">
                         <div class="position-absolute goyang" style="top: 0%; left: 10%;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="opacity-50" onload="util.animate(this, 2000, 'animate-love')" viewBox="0 0 16 16">
@@ -466,7 +233,7 @@
             </div>
         </section>
 
-<!-- Ballon animation -->
+<!-- Loveanimation -->
         <div class="position-relative">
             <div class="position-absolute goyang" style="top: 0%; right: 5%;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="opacity-50" onload="util.animate(this, 1500, 'animate-love')" viewBox="0 0 16 16">
@@ -499,7 +266,7 @@
         </div>
 
 
-        <!-- Ballon animation -->
+        <!-- Loveanimation -->
         <div class="position-relative">
             <div class="position-absolute goyang" style="top: 0%; left: 5%;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="opacity-50" onload="util.animate(this, 4000, 'animate-love')" viewBox="0 0 16 16">
@@ -542,7 +309,7 @@
 
                     <p class="mt-4 py-2 animasi2" style="font-size: 0.95rem;">Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, insyaAllah kami akan menyelenggarakan acara:</p>
 
-                    <!-- Love animation -->
+                    <!-- Loveanimation -->
                     <div class="position-relative">
                         <div class="position-absolute goyang" style="top: 0%; right: 10%;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="opacity-50" onload="util.animate(this, 3000, 'animate-love')" viewBox="0 0 16 16">
@@ -568,7 +335,7 @@
                         <p class="mb-0 mt-1 mx-1 pb-4 animasi2" style="font-size: 0.95rem;">Jl. Tanah Merdeka II No. 44, RT.003/RW.006, Rambutan, Kec. Ciracas, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13830</p>
                     </div>
 
-                    <!-- Love animation -->
+                    <!-- Loveanimation -->
                     <div class="position-relative">
                         <div class="position-absolute goyang" style="top: 0%; left: 10%;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="opacity-50" onload="util.animate(this, 2000, 'animate-love')" viewBox="0 0 16 16">
@@ -884,198 +651,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
     <script src="./js/livechat.js" type="module"></script>
-    <script type="text/javascript">
-        // function scrollSmoothly() {
-        //   window.scrollBy(0, 1); // Gulir ke bawah 1 piksel
-        // }
-        // setInterval(scrollSmoothly, 10);
-
-        // const carousel = document.querySelector('.carousel');
-        // const slides = document.querySelectorAll('.slide');
-        // let slideIndex = 0;
-
-        // function showSlide(n) {
-        //   slides.forEach((slide) => {
-        //     slide.style.transform = `translateX(${100 * n}%`;
-        //   });
-        // }
-
-        // function startCarousel() {
-        //   setInterval(() => {
-        //     slideIndex++;
-        //     if (slideIndex >= slides.length) {
-        //       slideIndex = 0;
-        //     }
-        //     showSlide(slideIndex);
-        //   }, 3000); // Ubah waktu interval sesuai kebutuhan
-        // }
-
-        // startCarousel();
-
-
-        const bg = ["./assets/images/bg.png","./assets/images/bg1.png", "./assets/images/bg2.jpg"];
-
-        const bege1 = document.getElementById("bgcover");
-        const bege2 = document.getElementById("bgprofile");
-        const bege3 = document.getElementById("bgwedd");
-
-        let currentImageIndexBG = 0;
-
-        function changeImageBG() {
-            bege1.src = bg[currentImageIndexBG];
-            bege2.src = bg[currentImageIndexBG];
-            bege3.src = bg[currentImageIndexBG];
-            currentImageIndexBG = (currentImageIndexBG + 1) % bg.length;
-        }
-        setInterval(changeImageBG, 3000);
-
-        const cewe = ["./assets/images/cewe.png", "./assets/images/cewe1.png", "./assets/images/cewe2.png"];
-        const cowo = ["./assets/images/cowo.png", "./assets/images/cowo1.png", "./assets/images/cowo2.png"];
-
-        const fotocewe = document.getElementById("fotocewe");
-        const fotocowo = document.getElementById("fotocowo");
-
-        let currentImageIndex = 0;
-
-        function changeImage() {
-            fotocewe.src = cewe[currentImageIndex];
-            fotocowo.src = cowo[currentImageIndex];
-            currentImageIndex = (currentImageIndex + 1) % cewe.length;
-        }
-        setInterval(changeImage, 2500);
-
-        var modal = document.getElementById("modal-image");
-        var images = document.getElementById("show-modal-image");
-
-        function openModal(img) {
-          modal.style.display = "block";
-          images.src = img.src;
-
-        }
-
-        window.onclick = function(event) {
-          if (event.target == modal) {
-            modal.style.display = "none";
-          }
-        }
-
-        const name = (new URLSearchParams(window.location.search)).get('to');
-        const guest = document.getElementById('guest-name');
-        if (!name || !guest) {
-            guest.remove();
-        } else {
-            const div = document.createElement('div');
-            div.classList.add('m-2');
-            div.innerHTML = `<p class="mt-0 mb-1 mx-0 p-0" style="font-size: 0.95rem;">${guest.getAttribute('data-message')}</p><h2>${name}</h2>`;
-            guest.appendChild(div);
-        }
-
-        const progressBar = document.querySelector('.progress-bar');
-        const progresst = document.getElementById('progresst');
-        let width = 0;
-
-        const animateProgressBar = () => {
-            if (width >= 100) {
-                setTimeout(() => {
-                    document.getElementById('loading').style.display = "none";
-                }, 500); // Waktu tunda sebelum pindah halaman
-                return;
-            }
-            width++;
-            progressBar.style.width = width + '%';
-            progresst.textContent = width ;
-            setTimeout(animateProgressBar, 30);
-        };
-
-        animateProgressBar();
-
-        function pindahHalaman() {
-                    document.getElementById('welcome').style.display = "none";
-                    togglePlayPause();
-                    window.scrollTo(0, 0);
-        }
-        
-        // Fungsi untuk memutar audio
-    let isPlaying = false;
-    const button = document.getElementById("button-music");
-        button.innerHTML = '<i class="fa-solid fa-circle-play"></i>';
-    
-
-    function togglePlayPause() {
-    const audio = document.getElementById("myAudio");
-      if (isPlaying) {
-        audio.pause();
-        isPlaying = false;
-        button.innerHTML = '<i class="fa-solid fa-circle-play"></i>';
-      } else {
-        audio.play();
-        audio.loop = true;
-        button.innerHTML = '<i class="fa-solid fa-circle-pause spin-button"></i>';
-        isPlaying = true;
-      }
-    }
-
-        function countdown(endDate) {
-  // Mengambil elemen HTML yang akan menampilkan hitungan mundur
-  const daysElement = document.getElementById('days');
-  const hoursElement = document.getElementById('hours');
-  const minutesElement = document.getElementById('minutes');
-  const secondsElement = document.getElementById('seconds');
-
-  // Fungsi untuk memperbarui hitungan mundur setiap detik
-  function updateCountdown() {
-    // Mendapatkan tanggal dan waktu saat ini
-    const now = new Date().getTime();
-
-    // Menghitung selisih waktu antara tanggal akhir dan tanggal sekarang
-    const distance = endDate - now;
-
-    // Menghitung hari, jam, menit, dan detik dari selisih waktu
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    // Memperbarui teks pada elemen HTML
-    daysElement.textContent = days;
-    hoursElement.textContent = hours;
-    minutesElement.textContent = minutes;
-    secondsElement.textContent = seconds;
-
-    // Jika waktu telah habis
-    if (distance < 0) {
-      clearInterval(countdownInterval);
-      // Tambahkan aksi yang ingin dilakukan ketika waktu habis (opsional)
-      console.log('Waktu telah habis!');
-    }
-
-  }
-
-  // Memanggil fungsi updateCountdown setiap detik
-  const countdownInterval = setInterval(updateCountdown, 1000);
-}
-
-// Contoh penggunaan:
-const countDownDate = new Date('December 21, 2024 07:59:59').getTime();
-countdown(countDownDate);
-
-        function copyToClipboard(id) {
-            var from = document.getElementById(id);
-            var range = document.createRange();
-            window.getSelection().removeAllRanges();
-            range.selectNode(from);
-            window.getSelection().addRange(range);
-            document.execCommand('copy');
-            window.getSelection().removeAllRanges();  
-            var x = document.getElementById("snackbar");
-
-          // Add the "show" class to DIV
-            x.className = "show";
-
-          // After 3 seconds, remove the show class from DIV
-            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-         }
-    </script>
+    <script src="./js/main.js" type="text/javascript"></script>
 </body>
 
 </html>

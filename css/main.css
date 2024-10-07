@@ -1,0 +1,243 @@
+    /*.fontstyle {
+                  font-family: 'Classic Romantic', sans-serif;
+                }
+                .fontstyle1 {
+                  font-family: 'Rose Pink', sans-serif;
+                }*/
+                 .fontstyle1 {
+                    font-family: 'Playfair Display', Sans-serif;
+                }
+            .modal { /* Hidden by default */
+              display: none;
+              position: fixed; 
+              z-index: 1; 
+              left: 0;
+              top: 0;
+              width: 100%; 
+              height: 100%; 
+              overflow: auto; 
+              background-color: rgba(0,0,0,0.4);
+            }
+
+            /* Gaya   
+             untuk konten dalam modal */
+            .modal-content {
+              margin: auto;
+              display: block;
+              width: 80%;
+              max-width: 700px;
+            }
+
+            /* Gaya untuk teks keterangan gambar */
+            #caption {
+              margin: auto;
+              display: block;
+              width: 80%;
+              max-width: 700px;
+              text-align: center;
+              color: #ccc;
+              padding: 10px 0;
+            }
+
+            /* Gaya untuk tombol tutup */
+            .close {
+              color: white;
+              position: absolute;
+              top: 15px;
+              right: 35px;
+              font-size: 40px;
+              font-weight: bold;
+            }
+
+            .geleng {
+              animation: shake 2.5s infinite;
+            }
+
+            @keyframes shake {
+              0% { transform: rotate(0deg); }
+              
+              10% { transform: rotate(12deg); }
+              
+              20% { transform: rotate(14deg); }
+              
+              30% { transform: rotate(16deg); }
+              
+              40% { transform: rotate(18deg); }
+              
+              50% { transform: rotate(18deg); }
+             
+              70% { transform: rotate(16deg); }
+             
+              80% { transform: rotate(14deg); }
+              
+              90% { transform: rotate(12deg); }
+             
+              100% { transform: rotate(0deg); }
+            }
+
+            .geleng1 {
+              animation: shake1 2.5s infinite;
+            }
+
+            @keyframes shake1 {
+              0% { transform: rotate(0deg); }
+              
+              10% { transform: rotate(-12deg); }
+              
+              20% { transform: rotate(-14deg); }
+              
+              30% { transform: rotate(-16deg); }
+              
+              40% { transform: rotate(-18deg); }
+              
+              50% { transform: rotate(-18deg); }
+             
+              70% { transform: rotate(-16deg); }
+             
+              80% { transform: rotate(-14deg); }
+              
+              90% { transform: rotate(-12deg); }
+             
+              100% { transform: rotate(0deg); }
+            }
+
+            @keyframes goyang {
+              from {
+                transform: translateX(-10px);
+              }
+              to {
+                transform: translateX(10px);
+              }
+            }
+            .animasi1 {
+              cursor: pointer;
+              animation: bounce1 2s infinite;
+            }
+
+            @keyframes bounce1 {
+              0% {
+                transform: translateY(0);
+              }
+              50% {
+                transform: translateY(10px);
+              }
+              100% {
+                transform: translateY(0);
+              }
+            }
+            .animasi2 {
+              cursor: pointer;
+              animation: bounce2 2s infinite;
+            }
+
+            @keyframes bounce2 {
+              0% {
+                transform: translateY(0);
+              }
+              50% {
+                transform: translateY(-8px);
+              }
+              100% {
+                transform: translateY(0);
+              }
+            }
+
+            .button {
+              border: none;
+              color: black;
+              padding: 15px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              cursor: pointer;
+              animation: bounce 2s infinite;
+            }
+
+            @keyframes bounce {
+              0% {
+                transform: translateY(0);
+              }
+              50% {
+                transform: translateY(-20px);
+              }
+              100% {
+                transform: translateY(0);
+              }
+            }
+            #snackbar {
+              visibility: hidden;
+              min-width: 250px;
+              margin-left: -125px;
+              background-color: #333;
+              color: #fff;
+              text-align: center;
+              border-radius: 25px;
+              padding: 16px;
+              position: fixed;
+              z-index: 1;
+              left: 50%;
+              bottom: 100px;
+              font-size: 17px;
+            }
+
+            #snackbar.show {
+              visibility: visible;
+              -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+              animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            }
+
+            @-webkit-keyframes fadein {
+              from {bottom: 0; opacity: 0;} 
+              to {bottom: 100px; opacity: 1;}
+            }
+
+            @keyframes fadein {
+              from {bottom: 0; opacity: 0;}
+              to {bottom: 100px; opacity: 1;}
+            }
+
+            @-webkit-keyframes fadeout {
+              from {bottom: 30px; opacity: 1;} 
+              to {bottom: 0; opacity: 0;}
+            }
+
+            @keyframes fadeout {
+              from {bottom: 100px; opacity: 1;}
+              to {bottom: 0; opacity: 0;}
+            }
+            .loading-container {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .progress-bar {
+                width: 50%; /* Sesuaikan lebar */
+                height: 20px;
+                background-color: #eee;
+                border-radius: 5px;
+                overflow: hidden;
+            }
+
+            .progress {
+                height: 100%;
+                background: linear-gradient(to right, #4CAF50, #333);
+                width: 0%;
+                transition: width 1.5s ease-in-out;
+            }
+
+            .hidden {
+                opacity: 0;
+                transition: opacity 0.5s;
+            }
+            .center {
+                position:fixed;
+                top: 40%;
+                left: 50%;
+                width:30em;
+                height:18em;
+                margin-top: -9em; /*set to a negative number 1/2 of your height*/
+                margin-left: -15em; /*set to a negative number 1/2 of your width*/
+            }
