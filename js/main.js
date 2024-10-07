@@ -28,6 +28,7 @@
 
 
         const bg = ["./assets/images/bg.png","./assets/images/bg1.png", "./assets/images/bg2.png"];
+        const background = ["./assets/images/background.png","./assets/images/background1.png", "./assets/images/background2.png"];
 
         const bege1 = document.getElementById("bgcover");
         const bege2 = document.getElementById("bgprofile");
@@ -36,7 +37,7 @@
         let currentImageIndexBG = 0;
 
         function changeImageBG() {
-            bege1.src = bg[currentImageIndexBG];
+            bege1.src = background[currentImageIndexBG];
             bege2.src = bg[currentImageIndexBG];
             bege3.src = bg[currentImageIndexBG];
             currentImageIndexBG = (currentImageIndexBG + 1) % bg.length;
